@@ -1,0 +1,139 @@
+/* ── AppNav ─────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1.5px solid rgba(77, 182, 172, 0.18);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Brand logo */
+.logo {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-brand-yellow);
+  letter-spacing: -0.3px;
+  transition: opacity 0.2s;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+/* Right side group */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.navLink:hover {
+  color: var(--color-brand-red);
+  font-weight: 900;
+}
+
+.navLink:global(.active) {
+  color: var(--color-brand-red);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+ 
+
+/* Cart button */
+.cartBtn {
+  position: relative;
+  background: none;
+  border: 1.5px solid rgba(77, 182, 172, 0.4);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand-yellow);
+  font-size: 1.15rem;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.cartBtn:hover, .cartBtn:global(.active) {
+  background: rgba(245, 166, 35, 0.1);
+  border-color: var(--color-brand-yellow);
+  transform: scale(1.08);
+}
+
+.cartBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--color-brand-red);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 800;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+
+
+/* Search bar 
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  color: #999;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 220px;
+  padding: 0.45rem 1rem 0.45rem 2.4rem;
+  border-radius: 50px;
+  border: 1.5px solid rgba(77, 182, 172, 0.35);
+  background: #f8fffe;
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  color: var(--color-text-dark);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, width 0.3s;
+}
+
+.searchInput::placeholder {
+  color: #aaa;
+}
+
+.searchInput:focus {
+  border-color: var(--color-brand-teal);
+  box-shadow: 0 0 0 3px rgba(77, 182, 172, 0.15);
+  width: 260px;
+}
+
+*/

@@ -1,0 +1,245 @@
+/* ── HomePage ────────────────────────────────────────── */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Hero ───────────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 0px);
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.88) saturate(1.05);
+}
+
+/* Warm amber overlay matching the reference */
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 166, 35, 0.18) 0%,
+    rgba(255, 220, 120, 0.12) 100%
+  );
+}
+
+/* Centered card */
+.heroCard {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  border: 1.5px solid rgba(245, 166, 35, 0.5);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+  padding: 2.5rem 3rem;
+  max-width: 460px;
+  width: 90%;
+  text-align: center;
+  animation: fadeUp 0.7s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroTitle {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--color-text-dark);
+  line-height: 1.15;
+  margin-bottom: 0.9rem;
+}
+
+.heroSubtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+.shopBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--color-brand-red);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 0.7rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 18px rgba(217, 48, 37, 0.35);
+  transition:
+    background 0.2s,
+    transform 0.15s,
+    box-shadow 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.shopBtn:hover {
+  background: #b82720;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(217, 48, 37, 0.45);
+}
+
+.shopBtn:active {
+  transform: translateY(0);
+}
+
+.btnArrow {
+  font-style: normal;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.shopBtn:hover .btnArrow {
+  transform: translateX(4px);
+}
+
+/* ── Featured Categories ──────────────────────────── */
+.section {
+  padding: 4rem 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sectionTitle {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--color-text-dark);
+  margin-bottom: 0.4rem;
+}
+
+.sectionSubtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.categoryCard {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px solid rgba(77, 182, 172, 0.15);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition:
+    transform 0.22s,
+    box-shadow 0.22s;
+}
+
+.categoryCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.categoryImg {
+  font-size: 3.2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fffbe6 0%, #e6faf8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+}
+
+.categoryBody {
+  padding: 1rem 1.2rem;
+}
+
+.categoryName {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.categoryCount {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* ── Why Us strip ─────────────────────────────────── */
+.whyUs {
+  background: linear-gradient(135deg, #fffbe6 0%, #e6faf8 100%);
+  padding: 3rem 2.5rem;
+}
+
+.whyUsInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.whyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.whyIcon {
+  font-size: 2.2rem;
+  background: #fff;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(77, 182, 172, 0.18);
+  margin-bottom: 0.4rem;
+}
+
+.whyTitle {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+}
+
+.whyDesc {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── Spacer to push footer to bottom ─────────────── */
+.grow {
+  flex: 1;
+}
